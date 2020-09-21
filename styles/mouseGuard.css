@@ -2,6 +2,10 @@
     font-family: Ringbearer;
     src:url(fonts/Ringearer.ttf);
 }
+@font-face {
+    font-family: HobbyHorse;
+    src:url(fonts/hobbyhorse.regular.otf);
+}
 .sandbox.sheet .window-content {
     padding: 5px 3px;
     overflow-y: hidden;
@@ -39,6 +43,8 @@
     height: 60px;
     padding: 3px;
     margin: 0px;
+    font-family: Ringbearer;
+    font-size: 16px;
 
 }
 .sandbox.sheet .charname input {
@@ -562,10 +568,10 @@
 }
 
 .sandbox.sheet .panelheader {
-    background-color: #4e4d49;
+    background-color: #371110;
     color:white;
     padding: 3px 5px;
-    font-family: Arial Narrow, sans-serif;
+    font-family: HobbyHorse;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
@@ -577,7 +583,7 @@
     background-color: transparent;
     color:black;
     padding: 3px 5px;
-    font-family: Arial Narrow, sans-serif;
+    font-family:HobbyHorse;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
