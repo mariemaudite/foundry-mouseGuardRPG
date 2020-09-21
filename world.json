@@ -14,7 +14,7 @@
   "keywords": [],
   "socket": false,
   "url": "",
-  "manifest": "",
+  "manifest": "https://raw.githubusercontent.com/mariemaudite/foundry-mouseGuardRPG/master/world.json",
   "download": "",
   "license": "",
   "readme": "",
