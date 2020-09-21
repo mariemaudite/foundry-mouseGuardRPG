@@ -7,7 +7,7 @@
   "compatibleCoreVersion": "1.0.0",
   "scripts": [],
   "esmodules": [],
-  "styles": [],
+  "styles": ["styles/mouseGuard.css"],
   "packs": [],
   "languages": [],
   "authors": [],
