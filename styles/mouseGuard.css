@@ -5,7 +5,7 @@
 .sandbox.sheet .window-content {
     padding: 5px 3px;
     overflow-y: hidden;
-    background: url(img/bgMG.jpg) no-repeat;
+    background: url(img/sheet-bg.png) no-repeat;
     background-size: cover;
 }
 
