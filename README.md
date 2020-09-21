@@ -4,7 +4,7 @@
      alt="banner of Mouse Guard RPG"
      style="float:center;" />
 
-<div style="text-align: justify;">Generación y desarrollo de la plantilla de personaje y del sistema de **Mouse Guard**, el juego de rol (Crane, Luke & Petersen, David; Holocubierta Eds., 2013). Para llevar a cabo dicho proceso, nos hemos basado en [Sandbox System Builder](https://gitlab.com/rolnl/sandbox-system-builder/), de Séregras, activo miembro de la comunidad rolera en español.
+<div class=text-justify>Generación y desarrollo de la plantilla de personaje y del sistema de **Mouse Guard**, el juego de rol (Crane, Luke & Petersen, David; Holocubierta Eds., 2013). Para llevar a cabo dicho proceso, nos hemos basado en [Sandbox System Builder](https://gitlab.com/rolnl/sandbox-system-builder/), de Séregras, activo miembro de la comunidad rolera en español.
 
 *Sistema*: Burning Wheel.  
 
