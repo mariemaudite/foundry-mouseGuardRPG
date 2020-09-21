@@ -1,0 +1,162 @@
+<form class="{{cssClass}}" autocomplete="off" id="sheet">
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100">
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"></h1>
+            <div class="flexblock-left ">
+                <div class="col-1-2">
+                    {{#if actor.data.istemplate}}
+                    {{else}}
+                    <div class="flexblock-left">
+                        <label class="label-free boldtext">MOD</label>
+                        <input class="input-min" type="text" name="data.mod" value="{{data.mod}}">
+
+                        {{#advShow}}
+                        <a class="roll-mode boldtext" title="Roll mode"><i>{{data.rollmode}}</i></a>
+                        {{/advShow}}
+
+                        {{#showRoller}}
+                        <a class="roll-free" title="Roll mode"><i class="fas fa-dice-d20"></i></a>
+                        {{/showRoller}}
+
+                        {{#if actor.data.selector}}
+                        <a class="mod-selector" title="Select Options"><i class="fas fa-exclamation-circle fa-2x"></i></a>
+                        {{/if}}
+                    </div>
+                    {{/if}}
+                </div>
+
+                <div class="rightblock">
+                    {{#if actor.data.istemplate}}
+                    {{else}}
+                    {{#isGM}}
+                    <select class="selectsheet" name="data.gtemplate" data-type="String">
+                        <!--
+{{#select actor.data.gtemplate}}
+{{#each data.sheets as |gtemplate id|}}
+<option  value="{{gtemplate}}">{{gtemplate}}</option>
+{{/each}}
+{{/select}}
+-->
+                    </select>
+                    {{/isGM}}
+                    {{/if}}
+                    {{#isGM}}
+
+
+                    <h3 class="rightblock-element">Template</h3>
+                    <input class="check-istemplate" name="data.istemplate" id="check-istemplate" type="checkbox" {{checked actor.data.istemplate}}="">
+
+
+                    {{/isGM}}
+
+                    {{#if actor.data.istemplate}}
+                    <h3 class="rightblock-element-tag">Rebuild Sheet</h3>
+                    <a class="rightblock-element item-refresh" title="Rebuild Sheet"><i class="fas fa-sync"></i></a>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <div class="atabs">
+        <a class="tab-prev" id="tab-prev">❮</a>
+        <nav class="sheet-tabs tabs" data-group="primary" id="tabs" tabs="2">
+
+            <a class="item tab-button" data-tab="description" id="tab-0">Bio</a>          
+            <a class="item tab-button" id="tab-1" data-tab="datos_principales">Datos Principales</a><a class="item tab-button" id="tab-2" data-tab="aptitudes_tab">Aptitudes</a><a style="display: none" id="tab-last"></a>
+            {{#isGM}}
+            <a class="item tab-button" data-tab="citems" id="tab-citems">cItems</a>
+            {{#if actor.data.istemplate}}
+            <a class="item tab-button" data-tab="token" id="tab-token">Token</a>
+            <a class="item tab-button" data-tab="config" id="tab-tabs">Tabs</a>
+            {{/if}}
+            {{/isGM}}
+
+        </nav>
+        <a class="tab-next" id="tab-next">❯</a>
+    </div>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body" id="sheet-body">
+
+        {{!-- Biography Tab --}}
+        <div class="tab biography active scrollable" data-group="primary" data-tab="description">
+            {{editor content=data.biography target="data.biography" button=true owner=owner editable=editable}}
+        </div>
+
+        {{#if actor.data.istemplate}}
+        {{!-- SheetTabs Tab --}}
+        <div class="tab properties" data-group="primary" data-tab="config">
+            <ol class="properties-list">
+                {{#each data.tabs as |tab id|}}
+                <li class="property flexrow" data-item-id="{{id}}">
+                    <h4 class="property-name">{{tab.name}}</h4>
+                    <div class="property-row">
+                        <a class="property-controls item-top" title="Top Item"><i class="fas fa-arrow-alt-circle-up"></i></a>
+                        <a class="property-controls item-bottom" title="Bottom Item"><i class="fas fa-arrow-alt-circle-down"></i></a>
+                        <a class="property-control item-edit" title="Edit Tab"><i class="fas fa-edit"></i></a>
+                        <a class="property-control item-delete" title="Delete Tab"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+        {{!-- Token Tab --}}
+        <div class="tab token scrollable" data-group="primary" data-tab="token">
+            <div class="flexblock">
+                <div class="col-1-2">
+                    <div class="new-row">
+                        <div class="flexblock-left">
+                            <label class="label-medlarge">Bar 1</label>
+                            <input class="token-bar1" type="text" name="data.tokenbar1" value="{{data.tokenbar1}}" tkvalue="">
+                        </div>
+                    </div>
+                    <div class="new-row">
+                        <div class="flexblock-left">
+                            <label class="label-medlarge">Shield Stat</label>
+                            <input class="token-shieldstat" type="text" name="data.shieldstat" value="{{data.shieldstat}}" tkvalue="">
+                        </div>
+                    </div>
+                    <div class="new-row">
+                        <div class="flexblock-left">
+                            <label class="label-medlarge">Display Name</label>
+                            <select class="token-displayName" name="data.displayName" data-type="String" tkvalue="NONE">
+                                {{#select actor.data.displayName}}
+                                <option value="NONE">NONE</option>
+                                <option value="CONTROL">CONTROL</option>
+                                <option value="OWNER_HOVER">OWNER HOVER</option>
+                                <option value="HOVER">HOVER</option>
+                                <option value="OWNER">OWNER</option>
+                                <option value="ALWAYS">ALWAYS</option>
+                                {{/select}}
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+        {{!-- cItems Tab --}}
+        <div class="tab citems scrollable" data-group="primary" data-tab="citems">
+            <ol class="properties-list">
+                {{#each data.citems as |citem cid|}}
+                <li class="property flexrow" data-item-id="{{cid}}">
+                    <h4 class="property-name">{{citem.name}}</h4>
+                    <div class="property-row">
+                        <a class="property-control citem-edit" title="Edit cItem"><i class="fas fa-edit"></i></a>
+                        <a class="property-control citem-delete" citemid="{{citem.id}}" title="Delete cItem"><i class="fas fa-trash"></i></a>
+                    </div>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+
+
+
+    <div class="tab scrollable datos_principales_tab" id="datos_principales_Def" data-group="primary" data-tab="datos_principales"><div class="new-column" id="datos_principalesBody"><div class="new-block" id="datos_principalesrow0"><div id="datos_multipanelmulti" class="multi-1-1-col"><div class="new-block" id="datos_multipanelmultirow1"><div class="multi-1-3"><div class="new-row"><div class="flexblock-center"><h3 class="centertext label-med" id="nombre" attid="n6vrIapsBE8qPvMt">Nombre</h3><input name="data.attributes.nombre.value" value="{{data.attributes.nombre.value}}" type="text" class="input-med nombre" attid="n6vrIapsBE8qPvMt"></div><div class="flexblock-center"><h3 class="centertext label-med" id="edad" attid="xWowkVDmlZfHrQbM">Edad</h3><input name="data.attributes.edad.value" value="{{data.attributes.edad.value}}" type="text" class="input-med edad" attid="xWowkVDmlZfHrQbM"></div><div class="flexblock-center"><h3 class="centertext label-med" id="hogar" attid="Bl3x21MW0crS7x17">Hogar</h3><input name="data.attributes.hogar.value" value="{{data.attributes.hogar.value}}" type="text" class="input-med hogar" attid="Bl3x21MW0crS7x17"></div></div></div><div class="multi-1-3"><div class="new-row"><div class="flexblock-center"><h3 class="centertext label-med" id="colorPelaje" attid="RtcIwPvi2liVLvo5">Pelaje</h3><input name="data.attributes.colorPelaje.value" value="{{data.attributes.colorPelaje.value}}" type="text" class="input-med colorPelaje" attid="RtcIwPvi2liVLvo5"></div><div class="flexblock-center"><h3 class="centertext label-med" id="rango" attid="COALmc8mQCaQPXec">Rango</h3><input name="data.attributes.rango.value" value="{{data.attributes.rango.value}}" type="text" class="input-med rango" attid="COALmc8mQCaQPXec"></div><div class="flexblock-center"><h3 class="centertext label-med" id="capa" attid="ojYf3ccec7xPFDDH">Capa</h3><input name="data.attributes.capa.value" value="{{data.attributes.capa.value}}" type="text" class="input-med capa" attid="ojYf3ccec7xPFDDH"></div><div class="flexblock-center"><h3 class="centertext label-med" id="amigo" attid="DyPEOLxA8ZckgkBS">Amigo</h3><input name="data.attributes.amigo.value" value="{{data.attributes.amigo.value}}" type="text" class="input-med amigo" attid="DyPEOLxA8ZckgkBS"></div></div></div><div class="multi-1-3"><div class="new-row"><div class="flexblock-center"><h3 class="centertext label-med" id="padres" attid="oRKT6tyfjGVY4qbV">Padres</h3><input name="data.attributes.padres.value" value="{{data.attributes.padres.value}}" type="text" class="input-med padres" attid="oRKT6tyfjGVY4qbV"></div><div class="flexblock-center"><h3 class="centertext label-med" id="maestroArtesano" attid="yCRVp0T07yey5w9B">M. Artesano</h3><input name="data.attributes.maestroArtesano.value" value="{{data.attributes.maestroArtesano.value}}" type="text" class="input-med maestroArtesano" attid="yCRVp0T07yey5w9B"></div><div class="flexblock-center"><h3 class="centertext label-med" id="mentor" attid="qcaxWKfaeWjGCHcK">Mentor</h3><input name="data.attributes.mentor.value" value="{{data.attributes.mentor.value}}" type="text" class="input-med mentor" attid="qcaxWKfaeWjGCHcK"></div><div class="flexblock-center"><h3 class="centertext label-med" id="enemigo" attid="CV2pP8MLqroBwMdp">Enemigo</h3><input name="data.attributes.enemigo.value" value="{{data.attributes.enemigo.value}}" type="text" class="input-med enemigo" attid="CV2pP8MLqroBwMdp"></div></div></div></div></div></div><div class="new-block" id="datos_principalesrow1"><div class="col-1-1"><div class="panelheader">Trasfondo</div><div class="new-row"><div class="flexblock-center"><textarea class="texteditor-med creencia" name="data.attributes.creencia.value" attid="l2BxFdd1FXPokDZM">{{data.attributes.creencia.value}}</textarea><textarea class="texteditor-med objetivo" name="data.attributes.objetivo.value" attid="pHUXwg7FRsB3s3NE">{{data.attributes.objetivo.value}}</textarea><textarea class="texteditor-med instinto" name="data.attributes.instinto.value" attid="E18XT6WeDKK04IPB">{{data.attributes.instinto.value}}</textarea></div></div></div></div><div class="new-block" id="datos_principalesrow2"><div class="col-1-3"><div class="panelheader">Equipo</div><div class="table-row"><div class="flexblock-left"><table class="table-free inventario_tabla" name="data.attributes.inventario_tabla" value="{{data.attributes.inventario_tabla.value}}" attid="m1K3k3RpUBhF4XvJ"><thead><tr><th class="input-free">Item</th><th class="input-min">Num</th><th class="cell-empty"></th></tr></thead><tbody class="table" id="m1K3k3RpUBhF4XvJ"></tbody></table></div></div></div><div id="recompensasycondiciones_multipanelmulti" class="multi-2-3-col"><div class="new-block" id="recompensasycondiciones_multipanelmultirow2"><div class="multi-1-3"><div class="panelheader">Recompensas</div><div class="new-row"><div class="flexblock-center"><div class="badge-block centertext destino" name="destino" attid="gABVgjVUdTXPM5fa"><label class="boldtext">Destino</label><div class="badge-container"><a class="badge-image"><i class="badge-click" attkey="destino" attid="gABVgjVUdTXPM5fa"></i></a><a attkey="destino" attid="gABVgjVUdTXPM5fa" class="badge-clickgm"><i class="fas fa-plus-circle"></i></a></div></div></div><div class="flexblock-center"><div class="badge-block centertext caracter" name="caracter" attid="x6JmLdnbtjxiGOS5"><label class="boldtext">Carácter</label><div class="badge-container"><a class="badge-image"><i class="badge-click" attkey="caracter" attid="x6JmLdnbtjxiGOS5"></i></a><a attkey="caracter" attid="x6JmLdnbtjxiGOS5" class="badge-clickgm"><i class="fas fa-plus-circle"></i></a></div></div></div></div></div><div class="multi-1-3"><div class="panelheader">Condiciones</div><div class="new-row"><div class="flexblock-center"><h3 class="centertext label-med" id="sano_condicion" attid="kvwlKOx7VBsaYihr">Sano</h3><input class="input-small sano_condicion" name="data.attributes.sano_condicion.value" type="checkbox" {{checked actor.data.attributes.sano_condicion.value}} attid="kvwlKOx7VBsaYihr"></div><div class="flexblock-center"><h3 class="centertext label-med" id="hambriento_condicion" attid="bU9MFpNfDjZiyPlT">Hambriento</h3><input class="input-small hambriento_condicion" name="data.attributes.hambriento_condicion.value" type="checkbox" {{checked actor.data.attributes.hambriento_condicion.value}} attid="bU9MFpNfDjZiyPlT"></div><div class="flexblock-center"><h3 class="centertext label-med" id="enfadado_condicion" attid="VMgzfPbBRkx9kCGa">Enfadado</h3><input class="input-small enfadado_condicion" name="data.attributes.enfadado_condicion.value" type="checkbox" {{checked actor.data.attributes.enfadado_condicion.value}} attid="VMgzfPbBRkx9kCGa"></div><div class="flexblock-center"><h3 class="centertext label-med" id="cansado_condicion" attid="wGrDCGUQN0mQ9CJQ">Cansado</h3><input class="input-small cansado_condicion" name="data.attributes.cansado_condicion.value" type="checkbox" {{checked actor.data.attributes.cansado_condicion.value}} attid="wGrDCGUQN0mQ9CJQ"></div><div class="flexblock-center"><h3 class="centertext label-med" id="herido_condicion" attid="TzdfHDTik47BnKVL">Herido</h3><input class="input-small herido_condicion" name="data.attributes.herido_condicion.value" type="checkbox" {{checked actor.data.attributes.herido_condicion.value}} attid="TzdfHDTik47BnKVL"></div><div class="flexblock-center"><h3 class="centertext label-med" id="enfermo_condicion" attid="Sx9TgVuNnbMa4TFt">Enfermo</h3><input class="input-small enfermo_condicion" name="data.attributes.enfermo_condicion.value" type="checkbox" {{checked actor.data.attributes.enfermo_condicion.value}} attid="Sx9TgVuNnbMa4TFt"></div></div></div></div></div></div></div></div><div class="tab scrollable aptitudes_tab_tab" id="aptitudes_tab_Def" data-group="primary" data-tab="aptitudes_tab"><div class="new-column" id="aptitudes_tabBody"><div class="new-block" id="aptitudes_tabrow2"><div class="col-1-3"><div class="panelheader">Aptitudes Naturales</div><div class="new-row"><div class="flexblock-left"><h3 class=" label-med rollable" id="naturaleza" attid="V0xWwr5DiZh7txFo">Naturaleza (ratón)</h3><input name="data.attributes.naturaleza.value" value="{{data.attributes.naturaleza.value}}" type="text" class="input-ahalf  naturaleza" attid="V0xWwr5DiZh7txFo"><input type="text" class="input-bhalf input-disabled inputGM naturaleza.max" name="data.attributes.naturaleza.max" value="{{data.attributes.naturaleza.max}}"></div><div class="flexblock-left"><h3 class=" label-free" id="exitos" attid="ZSEnxYb5pOQq8IU7">E</h3><div class="radio-input exitos" name="exitos" attid="ZSEnxYb5pOQq8IU7"></div></div><div class="flexblock-left"><h3 class=" label-free" id="fallos" attid="tAO45iBEwBpZgYIe">F</h3><div class="radio-input fallos" name="fallos" attid="tAO45iBEwBpZgYIe"></div></div><div class="flexblock-left"><h3 class=" label-med rollable" id="voluntad" attid="dSaacvCRoJAsajKl">Voluntad</h3><input name="data.attributes.voluntad.value" value="{{data.attributes.voluntad.value}}" type="text" class="input-ahalf  voluntad" attid="dSaacvCRoJAsajKl"><input type="text" class="input-bhalf input-disabled inputGM voluntad.max" name="data.attributes.voluntad.max" value="{{data.attributes.voluntad.max}}"></div><div class="flexblock-left"><h3 class=" label-med rollable" id="salud" attid="LsebhdRn78VneoY6">Salud</h3><input name="data.attributes.salud.value" value="{{data.attributes.salud.value}}" type="text" class="input-ahalf  salud" attid="LsebhdRn78VneoY6"><input type="text" class="input-bhalf input-disabled inputGM salud.max" name="data.attributes.salud.max" value="{{data.attributes.salud.max}}"></div><div class="flexblock-left"><h3 class=" label-med rollable" id="recursos" attid="oBGXo8JtELC8AeS9">Recursos</h3><input name="data.attributes.recursos.value" value="{{data.attributes.recursos.value}}" type="text" class="input-ahalf  recursos" attid="oBGXo8JtELC8AeS9"><input type="text" class="input-bhalf input-disabled inputGM recursos.max" name="data.attributes.recursos.max" value="{{data.attributes.recursos.max}}"></div><div class="flexblock-left"><h3 class=" label-med rollable" id="circulos" attid="efnppuJBieQKiq7T">Círculos</h3><input name="data.attributes.circulos.value" value="{{data.attributes.circulos.value}}" type="text" class="input-ahalf  circulos" attid="efnppuJBieQKiq7T"><input type="text" class="input-bhalf input-disabled inputGM circulos.max" name="data.attributes.circulos.max" value="{{data.attributes.circulos.max}}"></div></div></div><div id="multi" class="multi-2-3-col"><div class="new-block" id="multirow1"><div class="multi-2-3"><div class="panelheader">Rasgos</div><div class="table-row"><div class="flexblock-left"><table class="table-free rasgos_tabla" name="data.attributes.rasgos_tabla" value="{{data.attributes.rasgos_tabla.value}}" attid="QA5VCztmr4ZgHa6c"><thead><tr><th class="input-free">Item</th><th class="input-min">Nivel</th><th class="input-med">Usado</th><th class="input-med">Marcas</th><th class="cell-empty"></th></tr></thead><tbody class="table" id="QA5VCztmr4ZgHa6c"></tbody></table></div></div></div></div><div class="new-multiblock" id="multirow2"><div class="multi-2-3"><div class="panelheader">Habilidades</div><div class="table-row"><div class="flexblock-left"><table class="table-free habs_tabla" name="data.attributes.habs_tabla" value="{{data.attributes.habs_tabla.value}}" attid="9If78j1ST0eXg1ES"><thead><tr><th class="input-free">Item</th><th class="input-min">Valor</th><th class="input-med">Avance</th><th class="input-med">Lanzar</th><th class="cell-empty"></th></tr></thead><tbody class="table" id="9If78j1ST0eXg1ES"></tbody></table></div></div></div></div></div></div></div></div></section>
+</form>
