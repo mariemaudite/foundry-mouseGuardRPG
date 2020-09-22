@@ -6,6 +6,14 @@
     font-family: HobbyHorse;
     src:url(fonts/hobbyhorse.regular.otf);
 }
+@font-face {
+    font-family: TiepoloStd;
+    src:url(fonts/TiepoloStd-Book.otf);
+}
+@font-face {
+    font-family: TiepoloStdBold;
+    src:url(fonts/TiepoloStd-Bold.otf);
+}
 .sandbox.sheet .window-content {
     padding: 5px 3px;
     overflow-y: hidden;
@@ -44,7 +52,7 @@
     padding: 3px;
     margin: 0px;
     font-family: Ringbearer;
-    font-size: 16px;
+    font-size: 20px;
 
 }
 .sandbox.sheet .charname input {
@@ -568,11 +576,11 @@
 }
 
 .sandbox.sheet .panelheader {
-    background-color: #371110;
+    background-color: #511b09;
     color:white;
     padding: 3px 5px;
     font-family: HobbyHorse;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px black;
@@ -584,7 +592,7 @@
     color:black;
     padding: 3px 5px;
     font-family:HobbyHorse;
-    font-size: 14px;
+    font-size: 17px;
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px white;
@@ -917,11 +925,11 @@
 }
 
 .sandbox.sheet thead{
-    background-color: #7d7b73;
+    background-color: #a8401d;
     color:white;
     padding: 1px 5px;
-    font-family: Arial Narrow, sans-serif;
-    font-size: 14px;
+    font-family: HobbyHorse;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px black;
@@ -943,7 +951,7 @@
     height: 26px;
     padding: 2px 1px;
 
-    font-family: Arial Narrow, sans-serif;
+    font-family: TiepoloStd;
     font-size: 14px;
 }
 
