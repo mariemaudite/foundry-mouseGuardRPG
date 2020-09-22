@@ -899,11 +899,10 @@
 
 
 .sandbox.sheet table{
-    background-color:#bcc2bf;
+    background-color: rgb(204, 116, 86, 0.3);
     border-style:none;
     padding: 0px 0px;
     margin:0;
-
 }
 
 .sandbox.sheet table.table-free{
@@ -1055,8 +1054,8 @@
     width:100%;
     flex: 0 0 40px;
     flex-direction: row;
-    border-top: 1px solid #AAA;
-    border-bottom: 2px solid black;
+    border-top: 1px solid #ab5e44;
+    border-bottom: 2px solid #511b09;
     padding: 15px 20px;
 
 }
