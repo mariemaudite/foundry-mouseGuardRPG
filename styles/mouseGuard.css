@@ -581,7 +581,6 @@
     padding: 3px 5px;
     font-family: HobbyHorse;
     font-size: 17px;
-    font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px black;
     border-bottom: 1px solid black;
@@ -591,7 +590,6 @@
     background-color: transparent;
     color:black;
     padding: 3px 5px;
-    font-family:HobbyHorse;
     font-size: 17px;
     font-weight: bold;
     text-align: center;
@@ -930,7 +928,6 @@
     padding: 1px 5px;
     font-family: HobbyHorse;
     font-size: 16px;
-    font-weight: bold;
     text-align: center;
     text-shadow: 1px 1px black;
     border-bottom: 1px solid black;
