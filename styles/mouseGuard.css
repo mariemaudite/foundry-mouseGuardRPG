@@ -1203,7 +1203,7 @@
 }
 
 .roll-underline{
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #511b09;
     height:20px;
     width:70%;
 }
@@ -1219,7 +1219,7 @@
     font-size: 12px;
     text-align:center;
     width:100%;
-    margin-top:-15px;
+    margin-top:-25px;
 }
 
 .roll-conditional{
