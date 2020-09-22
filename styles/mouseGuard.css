@@ -579,7 +579,7 @@
     background-color: #511b09;
     color:white;
     padding: 3px 5px;
-    font-family: HobbyHorse;
+    font-family: TiepoloStdBold;
     font-size: 17px;
     text-align: center;
     text-shadow: 1px 1px black;
@@ -926,7 +926,7 @@
     background-color: #a8401d;
     color:white;
     padding: 1px 5px;
-    font-family: HobbyHorse;
+    font-family: TiepoloStdBold;
     font-size: 16px;
     text-align: center;
     text-shadow: 1px 1px black;
@@ -1062,9 +1062,8 @@
 }
 
 .sandbox.sheet .modtitle{
-    font-family: Didot, sans-serif;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: HobbyHorse;
+    font-size: 18px;
     padding:5px 10px;
 
 }
@@ -1422,7 +1421,7 @@
 }
 
 .dc-header{
-    font-family: Tahoma, sans-serif;
+    font-family: TiepoloStd;
     font-size: 22px;
     font-weight: bold;
     text-align:center;
