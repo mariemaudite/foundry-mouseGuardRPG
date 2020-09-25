@@ -1,0 +1,38 @@
+{"name":"Datos_Props","type":"Item","sort":null,"flags":{},"parent":"PdAte2akUD8QVbkP","color":"","_id":"5vWJgJjYNAdnrH6n"}
+{"name":"Recompensas_Props","type":"Item","sort":null,"flags":{},"parent":"PdAte2akUD8QVbkP","color":"","_id":"6OAcAtLTDJIwEilM"}
+{"name":"Paneles","type":"Item","sort":null,"flags":{},"parent":"HmOYUX56QUqbPba9","color":"","_id":"CGq0Isfh81TVaitc"}
+{"name":"Tabs","type":"Item","sort":null,"flags":{},"parent":"HmOYUX56QUqbPba9","color":"","_id":"ETqHF1c6wGMQWFLt"}
+{"name":"_Plantilla","type":"Item","sort":null,"flags":{},"parent":null,"color":"","_id":"HmOYUX56QUqbPba9"}
+{"name":"Propiedades","type":"Item","sort":null,"flags":{},"parent":"HmOYUX56QUqbPba9","color":"","_id":"PdAte2akUD8QVbkP"}
+{"name":"_Plantillas","type":"Actor","sort":null,"flags":{},"parent":null,"color":"","_id":"TCW1CtO0bpNj6mnA"}
+{"_id":"YQtLaBssaZ6trM7E","name":"ArmasItems","type":"Item","sort":200000,"flags":{},"parent":"ycqgvX6XzAELqJBL","color":""}
+{"name":"Aptitudes_Props","type":"Item","sort":null,"flags":{},"parent":"PdAte2akUD8QVbkP","color":"","_id":"cNPurfeq3Wn0UsVn"}
+{"_id":"dDgO6eEhEe0YKRWS","name":"Habilidades","type":"Item","sort":100000,"flags":{},"parent":"ycqgvX6XzAELqJBL","color":""}
+{"name":"_Compendio","type":"Item","sort":null,"flags":{},"parent":null,"color":"","_id":"eT3NfqElXmf52BtF"}
+{"name":"Rasgos","type":"Item","sort":400000,"flags":{},"parent":"ycqgvX6XzAELqJBL","color":"","_id":"hdqj2IXk1D1AnwD6"}
+{"name":"_Config","type":"Item","sort":null,"flags":{},"parent":"eT3NfqElXmf52BtF","color":"","_id":"ibRxdlmQyUvRKmZK"}
+{"name":"Multipaneles","type":"Item","sort":500000,"flags":{},"parent":"CGq0Isfh81TVaitc","color":"","_id":"kAgOn6NdTWrruj3g"}
+{"name":"Groups_Prop_ESP","type":"Item","sort":null,"flags":{},"parent":"ibRxdlmQyUvRKmZK","color":"","_id":"vVkCyZWHKRK1pVYA"}
+{"name":"Groups_ESP","type":"Item","sort":null,"flags":{},"parent":"ibRxdlmQyUvRKmZK","color":"","_id":"yQzqqTYQer8rRXnz"}
+{"name":"cItems","type":"Item","sort":null,"flags":{},"parent":null,"color":"","_id":"ycqgvX6XzAELqJBL"}
+{"name":"Condiciones_Props","type":"Item","sort":300000,"flags":{},"parent":"PdAte2akUD8QVbkP","color":"","_id":"ziIoDkTqNFDl6G6i"}
+{"name":"Trasfondo_Props","type":"Item","sort":null,"flags":{},"parent":"PdAte2akUD8QVbkP","color":"","_id":"zsrDnalMz8p8jcvW"}
+{"_id":"ycqgvX6XzAELqJBL","name":"Compendio del jugador","type":"Item","sort":600000,"flags":{},"parent":null,"color":""}
+{"_id":"eT3NfqElXmf52BtF","name":"Configuración del Sistema","type":"Item","sort":700000,"flags":{},"parent":null,"color":""}
+{"_id":"HmOYUX56QUqbPba9","name":"Plantilla de ficha","type":"Item","sort":800000,"flags":{},"parent":null,"color":""}
+{"_id":"ibRxdlmQyUvRKmZK","name":"_Config","type":"Item","sort":100000,"flags":{},"parent":"eT3NfqElXmf52BtF","color":""}
+{"_id":"HmOYUX56QUqbPba9","name":"Plantilla de ficha","type":"Item","sort":200000,"flags":{},"parent":"eT3NfqElXmf52BtF","color":""}
+{"name":"Propiedades (Carpetas)","type":"Item","sort":800000,"flags":{},"parent":"eT3NfqElXmf52BtF","color":"","_id":"0xqsjH5xJLSclKwi"}
+{"_id":"cNPurfeq3Wn0UsVn","name":"Aptitudes_Props","type":"Item","sort":500000,"flags":{},"parent":"eT3NfqElXmf52BtF","color":""}
+{"_id":"0xqsjH5xJLSclKwi","name":"Propiedades (Carpetas)","type":"Item","sort":100000,"flags":{},"parent":"cNPurfeq3Wn0UsVn","color":""}
+{"$$deleted":true,"_id":"0xqsjH5xJLSclKwi"}
+{"_id":"zsrDnalMz8p8jcvW","name":"Trasfondo_Props","type":"Item","sort":350000,"flags":{},"parent":"eT3NfqElXmf52BtF","color":""}
+{"_id":"6OAcAtLTDJIwEilM","name":"Recompensas_Props","type":"Item","sort":425000,"flags":{},"parent":"eT3NfqElXmf52BtF","color":""}
+{"_id":"5vWJgJjYNAdnrH6n","name":"Datos_Props","type":"Item","sort":387500,"flags":{},"parent":"eT3NfqElXmf52BtF","color":""}
+{"_id":"ziIoDkTqNFDl6G6i","name":"Condiciones_Props","type":"Item","sort":368750,"flags":{},"parent":"eT3NfqElXmf52BtF","color":""}
+{"_id":"kAgOn6NdTWrruj3g","name":"Multipaneles","type":"Item","sort":359375,"flags":{},"parent":"eT3NfqElXmf52BtF","color":""}
+{"name":"Compendio del Máster","type":"Item","sort":800000,"flags":{},"parent":null,"color":"","_id":"jo6soXaPmlmCqULH"}
+{"name":"Bestiario","type":"Item","sort":900000,"flags":{},"parent":"jo6soXaPmlmCqULH","color":"","_id":"XP2KYUPN2FlMfWkK"}
+{"_id":"jo6soXaPmlmCqULH","name":"Compendio del Máster","type":"Item","sort":500000,"flags":{},"parent":"ycqgvX6XzAELqJBL","color":""}
+{"_id":"jo6soXaPmlmCqULH","name":"Compendio del Máster","type":"Item","sort":800000,"flags":{},"parent":null,"color":""}
+{"_id":"jo6soXaPmlmCqULH","name":"Compendio del Máster","type":"Item","sort":650000,"flags":{},"parent":null,"color":""}
