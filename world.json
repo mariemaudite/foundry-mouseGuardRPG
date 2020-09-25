@@ -20,7 +20,7 @@
   "readme": "",
   "bugs": "",
   "changelog": "",
-  "background": "worlds/mouseGuardRPG-public/icons/backgroundMG.png",
+  "background": ["icons/MG_map.jpg"],
   "system": "sandbox",
   "coreVersion": "0.6.6",
   "systemVersion": "0.3.6",
