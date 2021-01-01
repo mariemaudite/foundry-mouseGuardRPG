@@ -7,8 +7,38 @@
   "compatibleCoreVersion": "1.0.0",
   "scripts": [],
   "esmodules": [],
-  "styles": ["styles/mouseGuard.css"],
-  "packs": [],
+  "styles": [
+    "styles/mouseGuard.css"
+  ],
+  "packs": [
+    {
+      "label": "HabilidadesMG",
+      "entity": "Item",
+      "name": "habilidadesmg",
+      "path": "packs/habilidadesmg.db",
+      "system": "sandbox",
+      "package": "world",
+      "absPath": "C:\\Users\\Administrador\\AppData\\Local\\FoundryVTT\\Data\\worlds\\mouseGuardRPG-public\\packs\\habilidadesmg.db"
+    },
+    {
+      "label": "RasgosMG",
+      "entity": "Item",
+      "name": "rasgosmg",
+      "path": "packs/rasgosmg.db",
+      "system": "sandbox",
+      "package": "world",
+      "absPath": "C:\\Users\\Administrador\\AppData\\Local\\FoundryVTT\\Data\\worlds\\mouseGuardRPG-public\\packs\\rasgosmg.db"
+    },
+    {
+      "label": "ArmasMG",
+      "entity": "Item",
+      "name": "armasmg",
+      "path": "packs/armasmg.db",
+      "system": "sandbox",
+      "package": "world",
+      "absPath": "C:\\Users\\Administrador\\AppData\\Local\\FoundryVTT\\Data\\worlds\\mouseGuardRPG-public\\packs\\armasmg.db"
+    }
+  ],
   "languages": [],
   "authors": [],
   "keywords": [],
@@ -20,11 +50,14 @@
   "readme": "",
   "bugs": "",
   "changelog": "",
-  "background": ["icons/MG_map.jpg"],
+  "background": [
+    "icons/MG_map.jpg"
+  ],
   "system": "sandbox",
-  "coreVersion": "0.6.6",
-  "systemVersion": "0.3.6",
+  "coreVersion": "0.7.9",
+  "systemVersion": "0.5.0",
   "nextSession": "",
-  "availability": 0,
-  "unavailable": false
+  "availability": 1,
+  "unavailable": false,
+  "id": "mouseGuardRPG-public"
 }
