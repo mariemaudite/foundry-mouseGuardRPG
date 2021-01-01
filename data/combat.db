@@ -1,2 +1,2 @@
 {"_id":"Njwt8iUFW8VqL3VG","permission":{"default":0,"U2lGHdjVXaTHvMiS":3},"sort":100001,"flags":{},"scene":"v5NYw5UHP4r4xAT6","combatants":[],"active":false,"round":0,"turn":0}
-{"_id":"qKTNxVW2cUmIOxw1","permission":{"default":0,"U2lGHdjVXaTHvMiS":3},"sort":100001,"flags":{},"scene":"v5NYw5UHP4r4xAT6","combatants":[{"_id":"spbTrqRIO5lQZrXi","flags":{},"tokenId":"SRzvEUWj1uYIf5ny","hidden":false}],"active":true,"round":0,"turn":0}
+{"_id":"qKTNxVW2cUmIOxw1","permission":{"default":0,"U2lGHdjVXaTHvMiS":3},"sort":100001,"flags":{},"scene":"v5NYw5UHP4r4xAT6","combatants":[],"active":true,"round":0,"turn":-1}
